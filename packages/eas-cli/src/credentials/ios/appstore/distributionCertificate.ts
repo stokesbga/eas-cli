@@ -92,7 +92,7 @@ export async function createDistributionCertificateAsync(
   try {
     const context = getRequestContext(authCtx);
     const results = await createCertificateAndP12Async(context, {
-      certificateType: CertificateType.IOS_DISTRIBUTION,
+      certificateType: CertificateType.DISTRIBUTION,
     });
     spinner.succeed(`Created Apple distribution certificate`);
     return {
